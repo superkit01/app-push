@@ -1,0 +1,43 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: root
+    password: 123456
+    virtual-host: /
+    connection-timeout: 15000
+
+huawei:
+  push:
+    app-id: '********'
+    app-secret: '********'
+    package-name: '********'
+oppo:
+  push:
+    app-id: '********'
+    app-key: '********'
+    app-secret: '********'
+    master-secret: '********'
+vivo:
+  push:
+    app-id: 0000000
+    app-key: '********'
+    app-secret: '********'
+meizu:
+  push:
+    app-id: 00000000
+    app-key: '********'
+    app-secret: '********'
+mi:
+  push:
+    app-id: '********'
+    app-key: '********'
+    app-secret: '********'
+    package-name: '********'
+custom: 
+  push:
+    app-id: '********'
+    app-key: '********'
+    app-secret: '********'
+    master-secret: '********'
+

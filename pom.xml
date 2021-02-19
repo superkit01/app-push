@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.superkit</groupId>
+	<artifactId>app-push</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>app-push</name>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+   		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-json</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.9</version>
+		</dependency>
+
+		<!--PUSH SDK -->
+		<dependency>
+			<groupId>com.oppo.push</groupId>
+			<artifactId>opush-server-sdk</artifactId>
+			<version>1.0.3</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/opush-server-sdk-1.0.3.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.vivo.push</groupId>
+			<artifactId>vPush-server-sdk</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/vPush-server-sdk-1.0.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.meizu.push</groupId>
+			<artifactId>push-server-sdk</artifactId>
+			<version>1.2.8.20190114_release</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/push-server-sdk-1.2.8.20190114_release.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.xiaomi.push</groupId>
+			<artifactId>MiPush-SDK-Server</artifactId>
+			<version>2.2.21</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/MiPush-SDK-Server-2.2.21.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.xiaomi.push</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/json-simple-1.1.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.huawei.push</groupId>
+			<artifactId>push.java.sdk</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/push.java.sdk-1.0.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.gexin.platform</groupId>
+			<artifactId>gexin-rp-sdk-http</artifactId>
+			<version>4.1.0.3</version>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>nexus-aliyun</id>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+		</repository>
+
+		<repository>
+			<id>getui-nexus</id>
+			<url>http://mvn.gt.igexin.com/nexus/content/repositories/releases/</url>
+		</repository>
+
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<includeSystemScope>true</includeSystemScope>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
